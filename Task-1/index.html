@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>To-Do List</title>
+
+  <style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: rgb(245, 209, 163);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+      background-color :black;
+      color: white;
+      width: 420px;
+      padding: 30px;
+      border-radius: 20px;
+      border: 3px solid blue;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .input-box {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    input {
+      width: 65%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+    }
+
+    button {
+      padding: 10px 14px;
+      margin-left: 8px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      background-color: rgb(64, 64, 139);
+      color: white;
+    }
+
+    ul {
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+      background-color: grey;
+      padding: 10px 15px;
+      margin :10px 0;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    li button {
+      background-color: red;
+      padding: 6px 10px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>To-Do List</h1>
+
+    <div class="input-box">
+      <input type="text" id="task-input" placeholder="Enter a new task">
+      <button id="add-btn">Add</button>
+    </div>
+
+    <ul id="task-list"></ul>
+  </div>
+  <script src="To-do.js"></script>
+</body>
+</html>
