@@ -1,8 +1,11 @@
 body{
+    margin:0;
     background: linear-gradient(to right, #2049b9, #8f0ccc);
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    
+    align-items: center;
+
 }
 .calculator{
     width:300px;
@@ -10,6 +13,12 @@ body{
     background-color:gray ;
     padding:10px;
     box-shadow:4px 4px 10px rgb(114, 27, 148);
+}
+h2{
+    display:flex;
+    justify-content: center;
+    color: white;
+
 }
 .display{
     height:60px;
