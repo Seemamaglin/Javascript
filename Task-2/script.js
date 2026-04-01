@@ -38,9 +38,17 @@ function addOperator(operator) {
 
 
 function calculate() {
-    const expression=display.value
-    display.value=eval(expression);
+    try {
+        if (signStack.length !== 0) {
+            display.value = "Error";
+            return;
+        }
+        display.value = eval(display.value);
+    } catch {
+        display.value = "Error";
+    }
 }
+
 function clearLastElement(){
     display.value=display.value.slice(0,-1);
 }
