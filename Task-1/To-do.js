@@ -9,6 +9,7 @@ button.addEventListener('click',()=>{
     input.value='';
 })
 
+
 function addtask(task){
   let li=document.createElement('li');
   li.innerText=task;
@@ -31,13 +32,10 @@ function addtask(task){
   })
 }
 
-function removeTask(task){
-  let newTasks=[];
+function removeTask(task) {
+  let index = tasks.indexOf(task);
 
-  for(let i=0;i<tasks.length;i++){
-    if (tasks[i]!== task){
-      newTasks.push(tasks[i]);
-    }
+  if (index !== -1) {
+    tasks.splice(index, 1);
   }
-  tasks=newTasks;
 }
