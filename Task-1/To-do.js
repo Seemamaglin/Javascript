@@ -4,9 +4,12 @@ let todoList = document.getElementById("task-list");
 
 // let tasks=[];
 let tasks=JSON.parse(localStorage.getItem('tasks'))||[];
+
+tasks.forEach(task => addtask(task));
 function saveTasks() {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
+
 
 button.addEventListener('click',()=>{
     if (input.value==="") return;
@@ -16,7 +19,6 @@ button.addEventListener('click',()=>{
     addtask(input.value)
     input.value='';
 })
-
 
 function addtask(task){
   let li=document.createElement('li');
