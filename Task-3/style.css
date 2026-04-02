@@ -23,3 +23,38 @@ body{
     transform:scale(1.05);
     transition:0.5s;
 }
+.lightbox{
+    width:100%;
+    position:fixed;
+    inset:0;
+    background-color: rgba(0,0,0,0.9);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    opacity:0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    z-index:100;
+}
+.lightbox.active{
+    opacity:1;
+    transition: opacity 0.5s ease;
+    pointer-events: auto;
+}
+.lightbox img{
+    max-width: 95vw;
+    max-height: 95vh;
+    width: auto;
+    height: auto;
+    transform: scale(1.50);
+    transition: transform 0.4s ease;
+}
+
+.lightbox span{
+    position:absolute;
+    top:5%;
+    right:5%;
+    font-size:30px;
+    color:white;
+    cursor:pointer;
+}
