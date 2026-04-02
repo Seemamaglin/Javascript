@@ -7,32 +7,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="lightbox" id="full-img">
-        <img src="images/img1.jfif" id="lightbox-img">
-        <span id="close-btn" onclick="closeLightbox()">&times;</span>
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <img id="lightboxImg">
     </div>
+
     <div class="gallery">
-        <img src="images/img1.jfif" onclick="openLightboxImg(this.src)">
-        <img src="images/img2.jfif" onclick="openLightboxImg(this.src)">
-        <img src="images/img3.jfif" onclick="openLightboxImg(this.src)">
-        <img src="images/img4.jfif" onclick="openLightboxImg(this.src)">
-        <img src="images/img5.jfif" onclick="openLightboxImg(this.src)">
-        <img src="images/img6.jfif" onclick="openLightboxImg(this.src)">
-        <img src="images/img7.jfif" onclick="openLightboxImg(this.src)">
-        <img src="images/img8.jfif" onclick="openLightboxImg(this.src)">
+        <img src="images/img1.jfif" class="gallery-img">
+        <img src="images/img2.jfif" class="gallery-img">
+        <img src="images/img3.jfif" class="gallery-img">
+        <img src="images/img4.jfif" class="gallery-img">
+        <img src="images/img5.jfif" class="gallery-img">
+        <img src="images/img6.jfif" class="gallery-img">
+        <img src="images/img7.jfif" class="gallery-img">
+        <img src="images/img8.jfif" class="gallery-img">
     </div>
 
     <script>
-        let lightbox=document.getElementById("full-img");
-        let lightboxImg=document.getElementById("lightbox-img");
-        function openLightboxImg(pic){
-            lightbox.style.display="flex";
-            lightboxImg.src=pic;
-        }
+        let lightbox=document.getElementById("lightbox");
+        let lightboxImg=document.getElementById("lightboxImg");
+        let thumbnails=document.querySelectorAll(".gallery-img");
+        let closeBtn=document.getElementById("closeBtn");
 
-        function closeLightbox(){
-            lightbox.style.display="none";
-        }
+        thumbnails.forEach(img =>{
+            img.addEventListener('click',()=>{
+                lightboxImg.src=img.src;
+                lightbox.classList.add("active");
+            })
+        });
+
+        closeBtn.addEventListener('click',()=>{
+            lightbox.classList.remove('active');
+        });
     </script>
 </body>
 </html>
