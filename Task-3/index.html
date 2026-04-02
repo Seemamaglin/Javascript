@@ -7,15 +7,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="gallery">
-        <img src="images/img1.jfif">
-        <img src="images/img2.jfif">
-        <img src="images/img3.jfif">
-        <img src="images/img4.jfif">
-        <img src="images/img5.jfif">  
-        <img src="images/img6.jfif">
-        <img src="images/img7.jfif">
-        <img src="images/img8.jfif">
+    <div class="lightbox" id="full-img">
+        <img src="images/img1.jfif" id="lightbox-img">
+        <span id="close-btn" onclick="closeLightbox()">&times;</span>
     </div>
+    <div class="gallery">
+        <img src="images/img1.jfif" onclick="openLightboxImg(this.src)">
+        <img src="images/img2.jfif" onclick="openLightboxImg(this.src)">
+        <img src="images/img3.jfif" onclick="openLightboxImg(this.src)">
+        <img src="images/img4.jfif" onclick="openLightboxImg(this.src)">
+        <img src="images/img5.jfif" onclick="openLightboxImg(this.src)">
+        <img src="images/img6.jfif" onclick="openLightboxImg(this.src)">
+        <img src="images/img7.jfif" onclick="openLightboxImg(this.src)">
+        <img src="images/img8.jfif" onclick="openLightboxImg(this.src)">
+    </div>
+
+    <script>
+        let lightbox=document.getElementById("full-img");
+        let lightboxImg=document.getElementById("lightbox-img");
+        function openLightboxImg(pic){
+            lightbox.style.display="flex";
+            lightboxImg.src=pic;
+        }
+
+        function closeLightbox(){
+            lightbox.style.display="none";
+        }
+    </script>
 </body>
 </html>
