@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
 </html>
 
@@ -13,11 +16,13 @@
     <div class="weather-card">
         <div class="search">
             <input type="text" id="city-input" placeholder="Enter city name">
-            <i class="fa fa-search" id="search-btn"></i>
+            <button id="search-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
         </div>
 
         <div class="error-message" id="error-message"></div>
-        
+
         <div class="weather-info">
             <img id="weather-icon" src="images/weather-img.png" alt="Weather Icon">
             <h1 id="temperature">--°C</h1>
