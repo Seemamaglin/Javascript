@@ -1,62 +1,9 @@
-const quizData = [
-  {
-    question: "What does HTML stand for?",
-    options: [
-      "Hyper Text Markup Language",
-      "High Text Machine Language",
-      "Home Tool Markup Language",
-      "Hyperlinks and Text Markup Language"
-    ],
-    answer: "Hyper Text Markup Language"
-  },
-  {
-    question: "Which language is used for styling web pages?",
-    options: [
-      "HTML",
-      "JQuery",
-      "CSS",
-      "XML"
-    ],
-    answer: "CSS"
-  },
-  {
-    question: "Which language runs in the browser?",
-    options: [
-      "Python",
-      "Java",
-      "C",
-      "JavaScript"
-    ],
-    answer: "JavaScript"
-  },
-  {
-    question: "Which HTML tag is used to define an internal style sheet?",
-    options: [
-      "<style>",
-      "<css>",
-      "<script>",
-      "<link>"
-    ],
-    answer: "<style>"
-  },
-  {
-    question: "Which property is used to change background color in CSS?",
-    options: [
-      "color",
-      "background-color",
-      "bgcolor",
-      "background"
-    ],
-    answer: "background-color"
-  },
-  {
-    question: "Inside which HTML element do we put JavaScript?",
-    options: [
-      "<javascript>",
-      "<js>",
-      "<script>",
-      "<code>"
-    ],
-    answer: "<script>"
-  },
-];
+let quizData=[];
+
+fetch('questions.json')
+    .then(response => response.json())
+    .then(data=>{
+        quizData=data;
+        loadQuiz();
+    })
+    .catch(error=>console.error('Error loading quiz data:', error));
