@@ -7,7 +7,8 @@
       "Home Tool Markup Language",
       "Hyperlinks and Text Markup Language"
     ],
-    "answer": "Hyper Text Markup Language"
+    "answer": "Hyper Text Markup Language",
+    "explanation": "HTML stands for Hyper Text Markup Language and is used to structure content on the web."
   },
   {
     "question": "Which language is used for styling web pages?",
@@ -17,7 +18,8 @@
       "CSS",
       "XML"
     ],
-    "answer": "CSS"
+    "answer": "CSS",
+    "explanation": "CSS (Cascading Style Sheets) is used to control the layout, colors, fonts, and overall appearance of web pages."
   },
   {
     "question": "Which language runs in the browser?",
@@ -27,7 +29,8 @@
       "C",
       "JavaScript"
     ],
-    "answer": "JavaScript"
+    "answer": "JavaScript",
+    "explanation": "JavaScript runs directly in the browser and is used to make web pages interactive."
   },
   {
     "question": "Which HTML tag is used to define an internal style sheet?",
@@ -37,7 +40,8 @@
       "<script>",
       "<link>"
     ],
-    "answer": "<style>"
+    "answer": "<style>",
+    "explanation": "The <style> tag is used to write internal CSS inside an HTML document."
   },
   {
     "question": "Which property is used to change background color in CSS?",
@@ -47,7 +51,8 @@
       "bgcolor",
       "background"
     ],
-    "answer": "background-color"
+    "answer": "background-color",
+    "explanation": "The background-color property is specifically used to set the background color of an element in CSS."
   },
   {
     "question": "Inside which HTML element do we put JavaScript?",
@@ -57,6 +62,7 @@
       "<script>",
       "<code>"
     ],
-    "answer": "<script>"
+    "answer": "<script>",
+    "explanation": "JavaScript code is placed inside the <script> tag in HTML."
   }
 ]
