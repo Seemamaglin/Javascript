@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple SPA</title>
+  <style>
+    * { 
+        box-sizing: border-box; 
+        margin: 0; padding: 0; 
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: white;
+    }
+
+    nav {
+      background: rgb(6, 63, 63);
+      padding: 14px ;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: rgb(167, 162, 162);
+      text-decoration: none;
+      font-size: 15px;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    nav a:hover       { background: rgb(28, 34, 34); color: #fff; }
+    nav a.active      { background: rgb(99, 99, 218); color: #fff; }
+
+    #app {
+      max-width: 700px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .page {
+      background: white;
+      border-radius: 8px;
+      padding: 32px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .page h1 { 
+        font-size: 26px; 
+        margin-bottom: 12px; 
+        color: rgb(9, 66, 66); 
+    }
+    .page p  { 
+        font-size: 15px; 
+        color: black 
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div id="app"></div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
