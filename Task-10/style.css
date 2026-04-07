@@ -183,3 +183,17 @@ header {
 .close-btn:hover{ 
     opacity:0.8; 
 }
+
+.filters{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  margin-bottom:24px;
+}
+
+.filters input,
+.filters select{
+  padding:10px;
+  border-radius:6px;
+  border:1px solid gray;
+}
