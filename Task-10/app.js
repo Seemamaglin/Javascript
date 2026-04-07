@@ -15,7 +15,6 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 const cartList = document.getElementById("cartItems");
 const productList = document.getElementById("products");
 
-/* ---------------- PRODUCTS ---------------- */
 
 function displayProducts(products) {
     productList.innerHTML = "";
@@ -128,45 +127,62 @@ function displayCartSummary() {
 }
 //calculate pricing
 function calculateSubtotal() {
-  let subtotal = 0;
+    let subtotal = 0;
 
-  cart.forEach(item => {
-    subtotal += item.price * item.count;
-});
+    cart.forEach(item => {
+        subtotal += item.price * item.count;
+    });
 
-return subtotal;
+    return subtotal;
 }
 
 //tax=5%
 function calculateTax(subtotal) {
-  return subtotal * 0.05;
+    return subtotal * 0.05;
 }
 
 //10% discount if total>=2000
 function calculateDiscount(subtotal) {
-  if (subtotal >= 2000) {
-    return subtotal * 0.10;
-  }
-  return 0;
+    if (subtotal >= 2000) {
+        return subtotal * 0.10;
+    }
+    return 0;
 }
 
 function calculateDiscount(subtotal) {
-  if (subtotal >= 2000) {
-    return subtotal * 0.10;
-  }
-  return 0;
+    if (subtotal >= 2000) {
+        return subtotal * 0.10;
+    }
+    return 0;
 }
 
 function calculateTotal() {
     const subtotal = calculateSubtotal();
-  const tax = calculateTax(subtotal);
-  const discount = calculateDiscount(subtotal);
-
-  return subtotal + tax - discount;
+    const tax = calculateTax(subtotal);
+    const discount = calculateDiscount(subtotal);
+    
+    return subtotal + tax - discount;
 }
 function closeCart(){
     document.getElementById("cartSidebar").classList.remove("open");
 }    
 
+
+document.getElementById("search").addEventListener("input", filterProducts);
+document.getElementById("category").addEventListener("change", filterProducts);
+
+//filter products
+function filterProducts() {
+    const text = document.getElementById("search").value.toLowerCase();
+    const category = document.getElementById("category").value;
+
+    const filtered = PRODUCTS.filter(p =>
+        (category === "all" || p.category === category) &&
+        (p.name.toLowerCase().includes(text) ||
+        p.desc.toLowerCase().includes(text))
+    );
+
+    displayProducts(filtered);
+}
 displayCart();
 updateCartCount();
