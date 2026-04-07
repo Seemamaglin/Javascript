@@ -2,25 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eCommerce Cart</title>
+    <title>e-Commerce App</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
     <header>
-        <h1>Shoppie</h1>
-        <div class="cart-icon">
-            Cart (<span id="cart-count">0</span>)
+        <h1>MyShop</h1>
+
+        <!-- Cart Icon -->
+        <div class="cart-icon" onclick="toggleCart()">
+            Cart (<span id="cartCount">0</span>)
         </div>
     </header>
 
-    <main id="product-list">
+    <div class="container">
 
-    </main>
+        <span>
+            <input id="search" type="text" placeholder="Search Products">
+            <button class="search-btn" onclick="searchProducts()">Search</button>
+        </span>
 
-    <footer>
-        &copy; 2026 Shoppie!
-    </footer>
+        <div id="products"></div>
+    </div>
+
+    <div class="cart" id="cartSidebar">
+        <div id="cartItems"></div>
+        <div id="cartSummary">
+            <p>Subtotal: ₹0</p>
+            <p>Tax: ₹0</p>
+            <p>Discount: ₹0</p>
+            <h3>Total: ₹0</h3>
+        </div>
+        <button class="close-btn" onclick="closeCart()">Close</button>
+    </div>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
